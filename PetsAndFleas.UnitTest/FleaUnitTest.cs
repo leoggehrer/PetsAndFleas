@@ -5,12 +5,15 @@
 namespace PetsAndFleas.UnitTest
 {
     /// <summary>
-    ///This is a test class for FleaTest and is intended
-    ///to contain all FleaTest Unit Tests
-    ///</summary>
+    /// This is a test class for FleaTest and is intended
+    /// to contain all FleaTest Unit Tests.
+    /// </summary>
     [TestClass()]
     public class FleaUnitTest
     {
+        /// <summary>
+        /// Tests if the pet's remaining bites are reduced correctly given a valid bite amount.
+        /// </summary>
         [TestMethod]
         public void ItShouldReducePetRemainingBites_GivenValidBiteAmount()
         {
@@ -29,6 +32,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(40, f1.AmountBites, "Floh 1 sollte 40 Bisse vollzogen haben!");
         }
 
+        /// <summary>
+        /// Tests if the correct remaining bites are returned when the bite amount exceeds the pet's remaining bites.
+        /// </summary>
         [TestMethod]
         public void ItShouldReturnRemainingBites_GivenBiteAmountExceedingRemainingBites()
         {
@@ -47,6 +53,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(0, p1.RemainingBites, "Alle Bisse des Haustiers sollten aufgebraucht sein.");
         }
 
+        /// <summary>
+        /// Tests if the maximum bites are returned when the flea jumps on another pet with full bite capacity.
+        /// </summary>
         [TestMethod]
         public void ItShouldReturnMaxBites_GivenAnotherPetWithFullBiteCapacity()
         {
@@ -70,6 +79,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(200, f1.AmountBites, "Floh sollte insgesamt 200 Bisse vollzogen haben.");
         }
 
+        /// <summary>
+        /// Tests if a negative bite amount throws an ArgumentException.
+        /// </summary>
         [TestMethod]
         public void ItShouldReturnZero_GivenNegativeBiteAmount()
         {
@@ -83,6 +95,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(0, f2.AmountBites, "Es sollten keine Bisse gezählt werden.");
         }
 
+        /// <summary>
+        /// Tests if the flea returns zero bites when not on any pet.
+        /// </summary>
         [TestMethod]
         public void ItShouldReturnZero_GivenFleaNotOnAnyPet()
         {
@@ -99,6 +114,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(0, result2, "Floh sitzt auf keinem Tier, daher sollte 0 zurückgeliefert werden.");
         }
 
+        /// <summary>
+        /// Tests if the flea assigns the pet correctly when jumping on a valid pet.
+        /// </summary>
         [TestMethod]
         public void ItShouldAssignPetCorrectly_GivenJumpOnValidPet()
         {
@@ -134,6 +152,9 @@ namespace PetsAndFleas.UnitTest
             Assert.IsNull(f3.ActualPet, "Floh 3 sollte nach Absprung auf keinem Tier sitzen.");
         }
 
+        /// <summary>
+        /// Tests if a negative bite amount throws an ArgumentException.
+        /// </summary>
         [TestMethod]
         public void ItShouldThrowArgumentException_GivenNegativeBiteAmount()
         {

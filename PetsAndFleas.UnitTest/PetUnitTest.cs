@@ -2,13 +2,12 @@
 
 namespace PetsAndFleas.UnitTest
 {
-    /// <summary>
-    ///This is a test class for PetTest and is intended
-    ///to contain all PetTest Unit Tests
-    ///</summary>
     [TestClass()]
     public class PetUnitTest
     {
+        /// <summary>
+        /// Tests if a new pet is initialized with 100 remaining bites.
+        /// </summary>
         [TestMethod]
         public void ItShouldInitializeWith100RemainingBites_GivenNewPet()
         {
@@ -23,6 +22,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(100, p3.RemainingBites, "Remaining Bites von p3 falsch initialisiert!");
         }
 
+        /// <summary>
+        /// Tests if the remaining bites are reduced correctly given a bite amount.
+        /// </summary>
         [TestMethod]
         public void ItShouldReduceRemainingBites_GivenBiteAmount()
         {
@@ -36,6 +38,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(60, p1.RemainingBites, "Nach 40 Bissen sollten 60 übrig sein!");
         }
 
+        /// <summary>
+        /// Tests if the method returns the remaining bites correctly when the bite amount exceeds the remaining bites.
+        /// </summary>
         [TestMethod]
         public void ItShouldReturnRemainingBites_GivenBiteAmountExceedingRemainingBites()
         {
@@ -51,6 +56,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(0, p1.RemainingBites, "Alle Bisse von p1 sollten aufgebraucht sein.");
         }
 
+        /// <summary>
+        /// Tests if the method returns the maximum remaining bites correctly when the bite amount exceeds the capacity.
+        /// </summary>
         [TestMethod]
         public void ItShouldReturnMaxRemainingBites_GivenBiteAmountExceedingCapacity()
         {
@@ -65,6 +73,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(0, p2.RemainingBites, "Alle Bisse von p2 sollten aufgebraucht sein.");
         }
 
+        /// <summary>
+        /// Tests if the method throws an ArgumentException given a negative bite amount.
+        /// </summary>
         [TestMethod]
         public void ItShouldThrowArgumentException_GivenNegativeBiteAmount()
         {
@@ -76,6 +87,9 @@ namespace PetsAndFleas.UnitTest
             Assert.AreEqual(100, p3.RemainingBites, "Negative Bissanzahl nicht möglich! 0 als Rückgabewert erwartet.");
         }
 
+        /// <summary>
+        /// Tests if the method throws an ArgumentException given a zero bite amount.
+        /// </summary>
         [TestMethod]
         public void ItShouldThrowArgumentException_GivenZeroBiteAmount()
         {

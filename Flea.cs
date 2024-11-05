@@ -1,4 +1,4 @@
-﻿namespace PetsAndFleas.ConApp
+namespace PetsAndFleas.ConApp
 {
     /// <summary>
     /// Represents a Flea that can jump on a Pet and bite it.
