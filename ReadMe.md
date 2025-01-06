@@ -64,6 +64,6 @@ springen.
 Hinweis: Methode GetBiten in Klasse Pet verwenden. Rückgabewert ist die Anzahl
 der tatsächlich durchgeführten Bisse.
 
-![Klassendiagramm](Classdiagram.png)
+![Klassendiagramm](Classdiagram.PNG)
 
 
